@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-title: 'Montserrat', sans-serif;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 15s linear infinite;
+}
+
+
+.custom-font-secondary {
+  font-family: 'Racing Sans One', cursive;
+}
+
+.background-dark{
+  background-color: #111111;
+}
+
+.background-light{
+  background-color: #FFFFFF;
+}
+
+html {
+  /* scroll-snap-type: y mandatory; */
+  overflow-x: hidden;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 15s linear infinite;
+}
+
+.custom-text-gradient {
+  background: linear-gradient(to right, rgb(0, 0, 0),rgb(255, 255, 255) , rgb(255, 255, 255),rgb(0, 0, 0));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
