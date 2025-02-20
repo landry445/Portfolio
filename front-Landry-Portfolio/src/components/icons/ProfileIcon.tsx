@@ -12,7 +12,7 @@ const ProfileIcon: React.FC<ProfileIconProps> = ({ size }) => {
       className="rounded-[17%]"      
       width={size} 
       height={size} 
-      src={theme === "Dark" ? "/photo-Landry.png" : "/img/profile-light.png"} 
+      src={theme === "Dark" ? "/photo-Landry.png" : "/photo-Landry-light.png"} 
       alt="profile" 
     />
   );

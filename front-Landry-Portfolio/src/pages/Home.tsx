@@ -6,7 +6,7 @@ export default function Home() {
 
   return (
     <div id="home" className="home-page relative min-h-screen">
-      <div className="absolute inset-0 bg-[url('/setup.webp')] bg-cover bg-center bg-no-repeat filter brightness-70"></div>
+      <div className={`absolute inset-0 ${themeStyle.bgPhoto} bg-cover bg-center bg-no-repeat `}></div>
 
       <div className="relative z-10 flex justify-center items-center min-h-screen text-white px-6">
         <div className="grid grid-cols-1 items-center w-full max-w-7xl">

@@ -72,7 +72,7 @@ const About: React.FC = () => {
 >
   <div className="flex-1 w-full text-white">
   <p
-  className="leading-relaxed max-h-[308px]"
+  className={`leading-relaxed max-h-[308px] ${themeStyle.textTertiary}`}
   style={{ fontSize: `${textFontSize}px` }}
 >
   Ancien chef pâtissier, j’ai troqué les fourneaux pour le code, mais l’essence reste la même : rigueur, créativité et adaptation.

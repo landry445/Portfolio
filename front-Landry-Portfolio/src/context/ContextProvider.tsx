@@ -6,6 +6,7 @@ type ThemeStyle = {
   bgTertiary: string;
   bgCard: string;
   bgForm: string;
+  bgPhoto: string;
   shadowColor: string;
   borderSecondary: string;
   textColor: string;
@@ -60,6 +61,7 @@ export const ContextProvider: React.FC<ContextProviderProps> = ({ children }) =>
     bgTertiary: theme === "Dark" ? "bg-stone-50" : "bg-gray-400",
     bgCard: theme === "Dark" ? "bg-slate-900" : "bg-zinc-50",
     bgForm: theme === "Dark" ? "bg-[#171717]" : "bg-[#FFFFFF]",
+    bgPhoto: theme === "Dark" ? "bg-[url('/setup.webp')] filter brightness-70" : "bg-[url('/setup-light.png')]",
     shadowColor: theme === "Dark" ? "shadow-slate-800" : "shadow-stone-200",
     borderSecondary: theme === "Dark" ? "border-blue-700" : "border-cyan-700",
     textColor: theme === "Dark" ? "text-blue-700" : "text-cyan-700",
