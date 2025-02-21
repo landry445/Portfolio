@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useStateContext } from "../context/ContextProvider";
 import useDimensions from "../components/customHooks/useDimensions";
 import SendIcon from "../components/icons/SendIcon";
-import SendSuccessToast from "../components/toasts/SendErrorToast.jsx";
+import SendSuccessToast from "../components/toasts/SendSuccessToast.jsx";
 import SendErrorToast from "../components/toasts/SendErrorToast";
 
 const Contact: React.FC = () => {

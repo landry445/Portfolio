@@ -70,7 +70,7 @@ const MobileNavbar: React.FC<NavbarProps> = ({ links }) => {
       </div>
 
       {menuOpen && (
-        <div className="fixed inset-0 z-20" onClick={() => setMenuOpen(false)}></div>
+        <div className="fixed inset-0 z-20 " onClick={() => setMenuOpen(false)}></div>
       )}
 
       <div

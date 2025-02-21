@@ -67,7 +67,7 @@ export const ContextProvider: React.FC<ContextProviderProps> = ({ children }) =>
     textColor: theme === "Dark" ? "text-blue-700" : "text-cyan-700",
     textPrimary: theme === "Dark" ? "text-slate-950" : "text-stone-50",
     textSecondary: theme === "Dark" ? "text-slate-950" : "text-stone-50",
-    textTertiary: theme === "Dark" ? "text-stone-50" : "text-slate-500",
+    textTertiary: theme === "Dark" ? "text-stone-50" : "text-slate-500 bg-[#FFFFFF]/30",
     textTechno: "#1d4ed8",
     borderTertiary: theme === "Dark" ? "border-stone-50" : "border-slate-600",
     svgColor: theme === "Dark" ? "#1d4ed8" : "#0e7490",
