@@ -1,35 +1,44 @@
-import React from 'react';
-import Navbar from './components/header/NavBar';
-import MobileNavbar from './components/header/MobileNavbar';
-import Home from './pages/Home';
-import Skills from './pages/Skills';
-import About from './pages/About';
-import HomeIcon from './components/icons/HomeIcon';
-import InfoIcon from './components/icons/InfoIcon';
-import ProjectIcon from './components/icons/ProjectIcon';
-import ContactIcon from './components/icons/ContactIcon';
-import { useStateContext } from "./context/ContextProvider"
-import Projects from './pages/Projects';
-import Footer from './components/Footer';
-import Contact from './pages/Contact';
-
-
+import Navbar from "./components/header/NavBar";
+import MobileNavbar from "./components/header/MobileNavbar";
+import Home from "./pages/Home";
+import Skills from "./pages/Skills";
+import About from "./pages/About";
+import HomeIcon from "./components/icons/HomeIcon";
+import InfoIcon from "./components/icons/InfoIcon";
+import ProjectIcon from "./components/icons/ProjectIcon";
+import ContactIcon from "./components/icons/ContactIcon";
+import { useStateContext } from "./context/ContextProvider";
+import Projects from "./pages/Projects";
+import Footer from "./components/Footer";
+import Contact from "./pages/Contact";
 
 const App: React.FC = () => {
-  const {theme} = useStateContext();
-  const body = document.getElementById('root');
+  const { theme } = useStateContext();
+  const body = document.getElementById("root");
   const links = [
-    { label: 'Accueil', href: '#home', icon: <HomeIcon style="w-6 h-6" /> },
-    { label: 'Competences', href: '#skills', icon: <InfoIcon style="w-6 h-6" /> },
-    { label: 'Projets', href: '#projects', icon: <ProjectIcon style="w-6 h-6" /> },
-    { label: 'Contact', href: '#contact', icon: <ContactIcon style="w-6 h-6" /> },
+    { label: "Accueil", href: "#home", icon: <HomeIcon style="w-6 h-6" /> },
+    {
+      label: "Competences",
+      href: "#skills",
+      icon: <InfoIcon style="w-6 h-6" />,
+    },
+    {
+      label: "Projets",
+      href: "#projects",
+      icon: <ProjectIcon style="w-6 h-6" />,
+    },
+    {
+      label: "Contact",
+      href: "#contact",
+      icon: <ContactIcon style="w-6 h-6" />,
+    },
   ];
 
   if (body) {
-    if (theme === 'Dark') {
-      body.className = 'background-dark';
+    if (theme === "Dark") {
+      body.className = "background-dark";
     } else {
-      body.className = 'background-light';
+      body.className = "background-light";
     }
   }
 
@@ -39,8 +48,8 @@ const App: React.FC = () => {
       <MobileNavbar links={links} />
       <div className="flex-1">
         <Home />
-        <div 
-          className='
+        <div
+          className="
           snap-y
           container
           md:w-11/12
@@ -50,16 +59,15 @@ const App: React.FC = () => {
           md:px-10
           lg:px-16
           xl:px-20
-          '
+          "
         >
-        <About />
-        <Skills/>
-        <Projects/>
-        <Contact/>
+          <About />
+          <Skills />
+          <Projects />
+          <Contact />
         </div>
         <Footer />
       </div>
-        
     </div>
   );
 };

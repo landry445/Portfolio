@@ -6,17 +6,16 @@ interface SendSuccessToastProps {
   setToast: (toast: string) => void;
 }
 
-
 const SendSuccessToast = ({ setToast }: SendSuccessToastProps) => {
-  const {themeStyle} = useStateContext();
+  const { themeStyle } = useStateContext();
 
   const iconStyle = {
     width: 18,
     height: 18,
     fill: themeStyle.svgTertiary,
-    opacity: 'opacity-100'
+    opacity: "opacity-100",
   };
-  
+
   return (
     <div
       className={`
@@ -49,12 +48,10 @@ const SendSuccessToast = ({ setToast }: SendSuccessToastProps) => {
           ${themeStyle.borderTertiary}
         `}
       >
-        <MessageIcon style={ iconStyle } />
+        <MessageIcon style={iconStyle} />
         <span className="sr-only">Check icon</span>
       </div>
-      <div className="ms-3 me-8 text-sm font-normal">
-        Message envoyé
-      </div>
+      <div className="ms-3 me-8 text-sm font-normal">Message envoyé</div>
       <button
         type="button"
         className="

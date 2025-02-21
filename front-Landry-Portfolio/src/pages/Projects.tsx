@@ -7,7 +7,7 @@ import ProjectCard from "../components/Cards/ProjectCard";
 import portfolio from "../projects/Portfolio";
 import universDeBlibli from "../projects/universDeBlibli";
 import Montessori from "../projects/Montessori";
-import { scroller  } from "react-scroll";
+import { scroller } from "react-scroll";
 
 const Projects: React.FC = () => {
   const { themeStyle } = useStateContext();
@@ -26,10 +26,10 @@ const Projects: React.FC = () => {
     margin: "0px 10px -10px 0px",
   });
   const refBorderC = useRef<HTMLDivElement | null>(null);
-    const isInViewBorderC = useInView(refBorderC, {
-      once: false,
-      margin: "0px 10px -10px 0px",
-    });
+  const isInViewBorderC = useInView(refBorderC, {
+    once: false,
+    margin: "0px 10px -10px 0px",
+  });
   const refSix = useRef<HTMLDivElement | null>(null);
   const isInViewSix = useInView(refSix, {
     once: false,
@@ -67,10 +67,12 @@ const Projects: React.FC = () => {
           duration: 2,
           delay: 0.4,
           ease: [0, 0.71, 0.2, 1.01],
-          }}
-        >
-          <div className={`border-t border-opacity-30 ${themeStyle.borderTertiary}`}></div>
-        </motion.div>
+        }}
+      >
+        <div
+          className={`border-t border-opacity-30 ${themeStyle.borderTertiary}`}
+        ></div>
+      </motion.div>
       <motion.div
         ref={refTitleProj}
         initial={{ opacity: 0, scale: 0.5 }}
@@ -85,7 +87,6 @@ const Projects: React.FC = () => {
           ease: [0, 0.71, 0.2, 1.01],
         }}
       >
-        
         <h3
           className={`
             text-[25px] 
@@ -127,9 +128,7 @@ const Projects: React.FC = () => {
           "
           initial={{ opacity: 0, scale: 0.5 }}
           animate={
-            isInViewSix
-              ? { opacity: 1, scale: 1 }
-              : { opacity: 0, scale: 0.5 }
+            isInViewSix ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.5 }
           }
           transition={{
             duration: 0.5,
@@ -138,13 +137,13 @@ const Projects: React.FC = () => {
           }}
           onClick={scrollToHome}
         >
-        <ProjectCard
-          title={portfolio.title}
-          technos={portfolio.technos}
-          date={portfolio.date}
-        >
-          {portfolio.description}
-        </ProjectCard>
+          <ProjectCard
+            title={portfolio.title}
+            technos={portfolio.technos}
+            date={portfolio.date}
+          >
+            {portfolio.description}
+          </ProjectCard>
         </motion.div>
         <motion.div
           ref={refSeven}

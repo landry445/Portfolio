@@ -9,21 +9,23 @@ const useDimensions = (): Dimensions => {
   const getCurrentDimension = (): Dimensions => {
     return {
       width: window.innerWidth,
-      height: window.innerHeight
+      height: window.innerHeight,
     };
   };
 
-  const [screenSize, setScreenSize] = useState<Dimensions>(getCurrentDimension());
+  const [screenSize, setScreenSize] = useState<Dimensions>(
+    getCurrentDimension()
+  );
 
   useEffect(() => {
     const updateDimension = () => {
       setScreenSize(getCurrentDimension());
     };
 
-    window.addEventListener('resize', updateDimension);
+    window.addEventListener("resize", updateDimension);
 
     return () => {
-      window.removeEventListener('resize', updateDimension);
+      window.removeEventListener("resize", updateDimension);
     };
   }, []);
 
