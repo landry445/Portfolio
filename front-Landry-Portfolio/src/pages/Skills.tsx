@@ -171,7 +171,7 @@ const About: React.FC = () => {
             >
               Je maîtrise des fondamentaux HTML, CSS, JavaScript.
               <br />
-              utilise&#160;
+              J'utilise&#160;
               <span
                 className={`
                   custom-font-secondary 
@@ -250,7 +250,7 @@ const About: React.FC = () => {
                     text-[1.125rem]
                 `}
               >
-                Java
+                Java.
               </span>
             </SkillsCard>
           </motion.div>

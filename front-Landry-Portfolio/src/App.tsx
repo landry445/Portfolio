@@ -18,7 +18,7 @@ const App: React.FC = () => {
   const links = [
     { label: "Accueil", href: "#home", icon: <HomeIcon style="w-6 h-6" /> },
     {
-      label: "Competences",
+      label: "Compétences",
       href: "#skills",
       icon: <InfoIcon style="w-6 h-6" />,
     },
