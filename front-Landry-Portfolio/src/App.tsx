@@ -56,9 +56,9 @@ const App: React.FC = () => {
           mx-auto
           px-0
           sm:px-5
-          md:px-10
-          lg:px-16
-          xl:px-20
+          md:px-5
+          lg:px-8
+          xl:px-10
           "
         >
           <About />

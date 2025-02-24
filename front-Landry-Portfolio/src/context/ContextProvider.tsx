@@ -13,6 +13,7 @@ type ThemeStyle = {
   textPrimary: string;
   textSecondary: string;
   textTertiary: string;
+  textfourth: string;
   textTechno: string;
   borderTertiary: string;
   svgColor: string;
@@ -66,7 +67,7 @@ export const ContextProvider: React.FC<ContextProviderProps> = ({
     bgPhoto:
       theme === "Dark"
         ? "bg-[url('/setup.webp')] filter brightness-70"
-        : "bg-[url('/setup-light.png')]",
+        : "bg-[url('/setup-light.png')] ",
     shadowColor: theme === "Dark" ? "shadow-slate-800" : "shadow-stone-200",
     borderSecondary: theme === "Dark" ? "border-blue-700" : "border-cyan-700",
     textColor: theme === "Dark" ? "text-blue-700" : "text-cyan-700",
@@ -74,6 +75,7 @@ export const ContextProvider: React.FC<ContextProviderProps> = ({
     textSecondary: theme === "Dark" ? "text-slate-950" : "text-stone-50",
     textTertiary:
       theme === "Dark" ? "text-stone-50" : "text-slate-500 bg-[#FFFFFF]/30",
+    textfourth: theme === "Dark" ? "text-stone-50" : "text-slate-500 ",
     textTechno: "#1d4ed8",
     borderTertiary: theme === "Dark" ? "border-stone-50" : "border-slate-600",
     svgColor: theme === "Dark" ? "#1d4ed8" : "#0e7490",

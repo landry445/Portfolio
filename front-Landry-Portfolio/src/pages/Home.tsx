@@ -6,12 +6,14 @@ export default function Home() {
   return (
     <div
       id="home"
-      className={`home-page
+      className={`
+         home-page
          relative
          min-h-screen`}
     >
       <div
-        className={`absolute
+        className={`
+          absolute
            inset-0
            ${themeStyle.bgPhoto}
            bg-cover
@@ -20,31 +22,35 @@ export default function Home() {
       ></div>
 
       <div
-        className={`relative
+        className={`
+           relative
            z-10
            flex
            justify-center
            items-center
            min-h-screen
            text-white
-           px-6`}
+          `}
       >
         <div
-          className={`flex
-             flex-col
-             justify-center
-             items-center
-             text-center
-             space-y-4`}
+          className={`
+            flex
+            flex-col
+            justify-center
+            items-center
+            text-center
+            space-y-4
+            mb-[312px]`}
         >
           <h1
-            className={`text-7xl
+            className={`
+               text-7xl
                font-bold
                px-6
                py-2
                inline-block`}
           >
-            <span className={`${themeStyle.textTertiary}`}>Landry DUPONT</span>
+            <span className={`${themeStyle.textfourth}`}>Landry DUPONT</span>
           </h1>
 
           <h2
@@ -55,7 +61,7 @@ export default function Home() {
                py-2
                inline-block`}
           >
-            DÉVELOPPEUR FULLSTACK
+            DÉVELOPPEUR WEB FULLSTACK
           </h2>
         </div>
       </div>
