@@ -6,12 +6,14 @@ type ThemeStyle = {
   bgTertiary: string;
   bgCard: string;
   bgForm: string;
+  bgPhoto: string;
   shadowColor: string;
   borderSecondary: string;
   textColor: string;
   textPrimary: string;
   textSecondary: string;
   textTertiary: string;
+  textfourth: string;
   textTechno: string;
   borderTertiary: string;
   svgColor: string;
@@ -49,7 +51,9 @@ type ContextProviderProps = {
   children: ReactNode;
 };
 
-export const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
+export const ContextProvider: React.FC<ContextProviderProps> = ({
+  children,
+}) => {
   const [theme, setTheme] = useState<string>("Dark");
   const [sidebar, setSideBar] = useState<boolean>(false);
   const [activeLink, setActiveLink] = useState<string>("Home");
@@ -60,12 +64,18 @@ export const ContextProvider: React.FC<ContextProviderProps> = ({ children }) =>
     bgTertiary: theme === "Dark" ? "bg-stone-50" : "bg-gray-400",
     bgCard: theme === "Dark" ? "bg-slate-900" : "bg-zinc-50",
     bgForm: theme === "Dark" ? "bg-[#171717]" : "bg-[#FFFFFF]",
+    bgPhoto:
+      theme === "Dark"
+        ? "bg-[url('/setup.webp')] filter brightness-70"
+        : "bg-[url('/setup-light.png')] ",
     shadowColor: theme === "Dark" ? "shadow-slate-800" : "shadow-stone-200",
     borderSecondary: theme === "Dark" ? "border-blue-700" : "border-cyan-700",
     textColor: theme === "Dark" ? "text-blue-700" : "text-cyan-700",
     textPrimary: theme === "Dark" ? "text-slate-950" : "text-stone-50",
     textSecondary: theme === "Dark" ? "text-slate-950" : "text-stone-50",
-    textTertiary: theme === "Dark" ? "text-stone-50" : "text-slate-500",
+    textTertiary:
+      theme === "Dark" ? "text-stone-50" : "text-slate-500 bg-[#FFFFFF]/30",
+    textfourth: theme === "Dark" ? "text-stone-50" : "text-slate-500 ",
     textTechno: "#1d4ed8",
     borderTertiary: theme === "Dark" ? "border-stone-50" : "border-slate-600",
     svgColor: theme === "Dark" ? "#1d4ed8" : "#0e7490",
@@ -75,32 +85,43 @@ export const ContextProvider: React.FC<ContextProviderProps> = ({ children }) =>
     svgTechno: theme === "Dark" ? "#149489" : "#0e7490",
     hover: {
       bgColor: theme === "Dark" ? "hover:bg-slate-800" : "hover:bg-stone-200",
-      bgOpacity: theme === "Dark" ? "hover:bg-opacity-90" : "hover:bg-opacity-80",
-      textColor: theme === "Dark" ? "hover:text-[#12a89c]" : "hover:text-cyan-700",
-      borderColor: theme === "Dark" ? "hover:border-stone-50" : "hover:border-slate-600",
+      bgOpacity:
+        theme === "Dark" ? "hover:bg-opacity-90" : "hover:bg-opacity-80",
+      textColor:
+        theme === "Dark" ? "hover:text-[#12a89c]" : "hover:text-cyan-700",
+      borderColor:
+        theme === "Dark" ? "hover:border-stone-50" : "hover:border-slate-600",
     },
     focus: {
-      borderColor: theme === "Dark" ? "focus:ring-blue-700" : "focus:ring-cyan-600",
-      textColor: theme === "Dark" ? "peer-focus:text-blue-700" : "peer-focus:text-cyan-600 ",
+      borderColor:
+        theme === "Dark" ? "focus:ring-blue-700" : "focus:ring-cyan-600",
+      textColor:
+        theme === "Dark"
+          ? "peer-focus:text-blue-700"
+          : "peer-focus:text-cyan-600 ",
     },
-    gradientColor: theme === "Dark" ? 
-      "bg-gradient-to-r from-[#117e75] to-[#1bd4c5]" : 
-      "bg-gradient-to-r from-[#FFFFFF] to-[#ffffff00]",
-    gradientSecondary: theme === "Dark" ? 
-      "bg-gradient-to-r from-[#00000000] to-[#111111]" : 
-      "bg-gradient-to-r from-[#ffffff00] to-[#FFFFFF]"
+    gradientColor:
+      theme === "Dark"
+        ? "bg-gradient-to-r from-[#117e75] to-[#1bd4c5]"
+        : "bg-gradient-to-r from-[#FFFFFF] to-[#ffffff00]",
+    gradientSecondary:
+      theme === "Dark"
+        ? "bg-gradient-to-r from-[#00000000] to-[#111111]"
+        : "bg-gradient-to-r from-[#ffffff00] to-[#FFFFFF]",
   };
 
   return (
-    <stateContext.Provider value={{
-      theme,
-      sidebar,
-      themeStyle,
-      activeLink,
-      setTheme,
-      setSideBar,
-      setActiveLink
-    }}>
+    <stateContext.Provider
+      value={{
+        theme,
+        sidebar,
+        themeStyle,
+        activeLink,
+        setTheme,
+        setSideBar,
+        setActiveLink,
+      }}
+    >
       {children}
     </stateContext.Provider>
   );

@@ -1,18 +1,16 @@
-import { useStateContext } from "../context/ContextProvider"
-import GitHubIcon from "./icons/GitHubIcon"
-import LinkedInIcon from "./icons/LinkedInIcon"
-import MailIcon from "./icons/MailIcon"
-
+import { useStateContext } from "../context/ContextProvider";
+import GitHubIcon from "./icons/GitHubIcon";
+import LinkedInIcon from "./icons/LinkedInIcon";
+import MailIcon from "./icons/MailIcon";
 
 const Footer = () => {
-
-  const {themeStyle} = useStateContext();
+  const { themeStyle } = useStateContext();
 
   const iconStyle = {
     width: 30,
     height: 30,
     fill: themeStyle.svgTertiary,
-    opacity: 'opacity-100'
+    opacity: "opacity-100",
   };
 
   return (
@@ -34,29 +32,14 @@ const Footer = () => {
           md:mt-12
         "
       >
-        <a
-          className="mx-4"
-          href="https://github.com/landry445"
-        >
-            <GitHubIcon 
-              style={ iconStyle }
-            />
+        <a className="mx-4" href="https://github.com/landry445">
+          <GitHubIcon style={iconStyle} />
         </a>
-        <a
-          className="mx-4"
-          href="https://www.linkedin.com/in/landry-dupont"
-        >
-            <LinkedInIcon  
-              style={ iconStyle }
-            />
+        <a className="mx-4" href="https://www.linkedin.com/in/landry-dupont">
+          <LinkedInIcon style={iconStyle} />
         </a>
-        <a
-          className="mx-4"
-          href="mailto: landrydupont790@gmail.com"
-        >
-            <MailIcon   
-              style={ iconStyle }
-            />
+        <a className="mx-4" href="mailto: landrydupont790@gmail.com">
+          <MailIcon style={iconStyle} />
         </a>
       </div>
       <div
@@ -70,7 +53,7 @@ const Footer = () => {
         <p>©Copyright 2025 - Landy Dupont</p>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

@@ -1,13 +1,21 @@
-interface MessageIconProps {
-  style?: string;
+interface IconStyle {
+  width: number;
+  height: number;
+  fill: string;
+  opacity: string;
 }
-
+interface MessageIconProps {
+  style: IconStyle;
+}
 const MessageIcon: React.FC<MessageIconProps>= ({style}) => {
 
   return (
     <svg 
       xmlns="http://www.w3.org/2000/svg" 
-      className={ style } 
+      width={style.width}
+      height={style.height}
+      fill={style.fill}
+      className={style.opacity}
       viewBox="0 0 16 16"
     >
     <path 

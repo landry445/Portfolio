@@ -1,17 +1,16 @@
-import { useStateContext } from "../../context/ContextProvider"
-import CloseIcon from "../icons/CloseIcon"
-import ErrorIcon from "../icons/ErrorIcon"
+import { useStateContext } from "../../context/ContextProvider";
+import CloseIcon from "../icons/CloseIcon";
+import ErrorIcon from "../icons/ErrorIcon";
 
 interface SendErrorToastProps {
   setToast: (toast: string) => void;
 }
 
 const SendErrorToast = ({ setToast }: SendErrorToastProps) => {
-
-  const {themeStyle} = useStateContext();
+  const { themeStyle } = useStateContext();
 
   return (
-    <div 
+    <div
       className={`
         z-50
         flex 
@@ -29,7 +28,7 @@ const SendErrorToast = ({ setToast }: SendErrorToastProps) => {
       `}
       role="alert"
     >
-      <div 
+      <div
         className={`
           inline-flex 
           items-center 
@@ -43,21 +42,20 @@ const SendErrorToast = ({ setToast }: SendErrorToastProps) => {
           ${themeStyle.borderTertiary}
         `}
       >
-          <ErrorIcon />
-          <span 
-            className="sr-only">Check icon</span>
+        <ErrorIcon />
+        <span className="sr-only">Check icon</span>
       </div>
-      <div 
+      <div
         className="
           ms-3 
           me-8
           text-sm 
           font-normal"
-        >
-          Erreur lors de l'envoi
+      >
+        Erreur lors de l'envoi
       </div>
-      <button 
-        type="button" 
+      <button
+        type="button"
         className="
             ms-auto 
             -mx-1.5 
@@ -68,15 +66,15 @@ const SendErrorToast = ({ setToast }: SendErrorToastProps) => {
             justify-center 
             h-8 
             w-8 
-          " 
-          aria-label="Close"
-          onClick={ () => setToast('') }
-        >
-          <span className="sr-only">Close</span>
-          <CloseIcon />
+          "
+        aria-label="Close"
+        onClick={() => setToast("")}
+      >
+        <span className="sr-only">Close</span>
+        <CloseIcon />
       </button>
     </div>
-  )
-}
+  );
+};
 
-export default SendErrorToast
+export default SendErrorToast;

@@ -15,10 +15,10 @@ mailRouter.post('/email', async (req, res) => {
 
   try {
     await transporter.sendMail(mailOptions);
-    console.log("✅ E-mail envoyé avec succès !");
+    console.log("E-mail envoyé avec succès !");
     res.status(200).send("E-mail envoyé avec succès.");
   } catch (error) {
-    console.error("❌ Erreur lors de l'envoi de l'e-mail :", error);
+    console.error("Erreur lors de l'envoi de l'e-mail :", error);
     res.status(500).json({ error: error.message });
   }
 });
