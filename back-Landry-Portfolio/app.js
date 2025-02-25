@@ -8,16 +8,17 @@ const mailRouter = require('./controllers/mailWs.js');
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(express.json());
 
 app.set('trust proxy', 1);
 
 const corsOptions = {
-  origin: ['http://localhost:3000'],
+  origin: ['https://www.ldupont-portfolio.fr'],
   methods: ['POST'],
   allowedHeaders: ['Content-Type'],
 };
 app.use(cors(corsOptions));
+
+app.use(express.json());
 
 app.use(helmet());
 
