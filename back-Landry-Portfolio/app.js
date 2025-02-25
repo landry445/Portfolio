@@ -8,6 +8,10 @@ const mailRouter = require('./controllers/mailWs.js');
 const app = express();
 const port = process.env.PORT || 3000;
 
+app.use(express.json());
+
+app.set('trust proxy', 1);
+
 const corsOptions = {
   origin: ['http://localhost:3000'],
   methods: ['POST'],
@@ -24,12 +28,7 @@ const emailLimiter = rateLimit({
 });
 app.use('/email', emailLimiter);
 
-
-app.use(express.json());
-
-
 app.use('/', mailRouter);
-
 
 app.listen(port, () => {
   console.log(`Serveur sécurisé lancé sur le port ${port}`);

@@ -3,7 +3,8 @@ const transporter = require('../mail/mail.js');
 const mailRouter = express.Router();
 console.log("📌 Route /email chargée !");
 
-mailRouter.post('/email', async (req, res) => { 
+mailRouter.post('/email', async (req, res) => {
+  
   const { name, email, message } = req.body;
 
   let mailOptions = {
