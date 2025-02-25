@@ -1,4 +1,3 @@
-import React from "react";
 import GitHubIcon from "../icons/GitHubIcon";
 import LinkedInIcon from "../icons/LinkedInIcon";
 import MailIcon from "../icons/MailIcon";

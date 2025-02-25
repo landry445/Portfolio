@@ -1,5 +1,3 @@
-import React from "react";
-
 interface StyleProps {
   width?: number;
   height?: number;
@@ -12,7 +10,6 @@ interface JavaScriptIconProps {
 }
 
 const JavaScriptIcon: React.FC<JavaScriptIconProps> = ({ style }) => {
-
   return (
     <svg
       width={style.width}

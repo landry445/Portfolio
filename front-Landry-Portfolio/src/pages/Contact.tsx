@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { Element } from "react-scroll";
 import { motion, useInView } from "framer-motion";
 import { useStateContext } from "../context/ContextProvider";

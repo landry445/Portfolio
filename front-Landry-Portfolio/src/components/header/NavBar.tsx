@@ -1,4 +1,3 @@
-import React from "react";
 import NavbarHeader from "./NavbarHeader";
 import SocialIcons from "./SocialIcons";
 import NavbarLinks from "./NavbarLinks";

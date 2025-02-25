@@ -1,4 +1,3 @@
-import React from "react";
 import { useStateContext } from "../../context/ContextProvider";
 import useDimensions from "../customHooks/useDimensions";
 

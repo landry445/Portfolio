@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { NavbarProps } from "./NavBar";
 import SocialIcons from "./SocialIcons";
 import { useStateContext } from "../../context/ContextProvider";
