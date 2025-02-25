@@ -82,6 +82,9 @@ const Contact: React.FC = () => {
 
     fetch(`${import.meta.env.VITE_API_BASE_URL}/email`, {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(data),
     })
       .then(() => {
